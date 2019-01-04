@@ -27,3 +27,16 @@ map(multiply2, [1, 2, 3, 4])  # Output [2, 4, 6, 8]
 MAPOUTPUT = map(lambda x : x*2, [1, 2, 3, 4]) #Output [2, 4, 6, 8]
 
 --> convert list = list(MAPOUTPUT) before you can call index etc.
+
+# 4) Filter
+Basic syntax
+filter(function_object, iterable)
+
+filter function expects two arguments, function_object and an iterable. function_object returns a boolean value. function_object is called for each element of the iterable and filter returns only those element for which the function_object returns true.
+#e.g. 1
+a = [1, 2, 3, 4, 5, 6]
+filter(lambda x : x % 2 == 0, a) # Output: [2, 4, 6]
+
+#e.g. 2
+dict_a = [{'name': 'python', 'points': 10}, {'name': 'java', 'points': 8}]
+filter(lambda x : x['name'] == 'python', dict_a) # Output: [{'name': 'python', 'points': 10}]
